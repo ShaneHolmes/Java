@@ -479,7 +479,7 @@ System.err.println("非数据类型不能强制类型转换。");   //e.printSta
   2.该类的**所有属性必须都是可序列化**的，如果有一个属性不是可序列化的，则该属性必须注明是短暂的（**transient**关键字）
   ```
   public class Employee implements java.io.Serializable//类必须实现 java.io.Serializable 对象
-{
+  { 
    public String name;
    public String address;
    public transient int SSN;//有一个属性不是可序列化的，则该属性必须注明是短暂的
@@ -489,8 +489,9 @@ System.err.println("非数据类型不能强制类型转换。");   //e.printSta
       System.out.println("Mailing a check to " + name
                            + " " + address);
    }
-}
-```
+  }
+  ```
+
 - JDK类库中序列化API
   **`java.io.ObjectOutputStream`:表示对象输出流
   它的`writeObject(Object obj)`方法可以对指定的obj参数进行序列化，把得到的字节序列写到一个目标输出流中**
