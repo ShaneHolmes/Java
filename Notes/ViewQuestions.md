@@ -237,8 +237,8 @@ ArrayList<Integer> -- 参数化的类型
 Integer -- 实际类型参数
 ```
 #### 通配符
-- [ ] **"?"**通配符
-"?"表示任意类型，使用"?"通配符可以引用各种参数化的类型，可以调用与参数化无关的方法(如size()方法)，不能调用与参数化有关的方法(如add()方法)
+- [ ] **?**通配符:
+    "?"表示任意类型，使用"?"通配符可以引用各种参数化的类型，可以调用与参数化无关的方法(如size()方法)，不能调用与参数化有关的方法(如add()方法)
 - [ ] 通配符的**扩展**
 - 限定通配符的**上边界**
 ```
@@ -252,7 +252,7 @@ ArrayList<? super Integer > collection4= new ArrayList<String>();//编译不通�
 ```
 #### 参数类型
 - [ ] 只有**引用类型**才能作为泛型方法的实际参数
-注：==++**如Integer是引用类型而int不是，int为基本类型**++==
+注：**如Integer是引用类型而int不是，int为基本类型**
 ```
 public class GenericTest {
     public static void main(String[] args) {
@@ -291,7 +291,7 @@ Error:(17, 29) java: 不兼容的类型: 推断类型不符合上限
     推断: java.lang.Number&java.lang.Comparable<? extends java.lang.Number&java.lang.Comparable<?>>
     上限: java.lang.String,java.lang.Object
 
-- [ ]** 泛型方法，泛型方法**
+- [ ] **泛型变量，泛型方法**
 - **当一个变量被声明为泛型时，只能被实例变量和方法调用(还有内嵌类型)，而不能被静态变量和静态方法调用**。因为静态成员是被所参数化的类所共享的，所以静态成员不应该有类级别的类型参数。静态变量和静态方法是类所共有的，是属于类级别的，而泛型在不同的对象里可能对应不同的类型状态，同一个类级别的静态变量或变量方法在各个对象中应该是一样的，这也是静态的含义，所以矛盾。
 
 ### 15.==与equal
@@ -380,7 +380,7 @@ Error:(17, 29) java: 不兼容的类型: 推断类型不符合上限
 
 ## 17.Java异常处理
 
-- [ ] Java有两种异常类型：**受检查的(checked)**和**不受检查的(unchecked)**的异常。受检查的异常必须throws声明；不受检查的异常不需要在方法或者是构造函数上声明，就算方法或者是构造函数的执行可能会抛出这样的异常，并且不受检查的异常可以传播到方法或者是构造函数的外面
+- [ ] Java有两种异常类型：**受检查的**(checked)和**不受检查的**(unchecked)的异常。受检查的异常必须throws声明；不受检查的异常不需要在方法或者是构造函数上声明，就算方法或者是构造函数的执行可能会抛出这样的异常，并且不受检查的异常可以传播到方法或者是构造函数的外面
 - [ ] **Exception**和**Error**有什么区别
 - 都是**Throwable**的子类
 - Exception用于用户程序**可以捕获**的异常情况，且能恢复。Exception又分为**运行时异常(Runtime Exception)**和**受检查的异常**。编译能通过，但一运行就终止了，程序不会处理运行时异常，出现这类异常程序会终止。而受检查的异常，要么使用try/catch捕获，要么使用throws将异常抛给它的父类来处理，否则编译不能通过
@@ -469,7 +469,7 @@ System.err.println("非数据类型不能强制类型转换。");   //e.printSta
 
 ## 19.序列化
 - [ ] 简单介绍：
-- **Java序列化**是把Java对象转化为字节序列的过程；**Java反序列化**是把Java字节序列回复成Java对象的过程
+- **Java序列化**是把Java对象转化为字节序列的过程；**Java反序列化**是把Java字节序列恢复成Java对象的过程
 - Java序列化好处：
 1.实现**数据的持久化**--把数据永久地保存到硬盘上（通常是放到文件里面temp.ser）
 2.实现**远程通信**，在网络上传送对象的字节序列（发送方将Java对象转化为字节序列，然后在网络上传送；接收方通过反序列化将字节序列恢复成Java对象）
@@ -478,7 +478,7 @@ System.err.println("非数据类型不能强制类型转换。");   //e.printSta
   1.**实现`java.io.Serializable`接口**
   2.该类的**所有属性必须都是可序列化**的，如果有一个属性不是可序列化的，则该属性必须注明是短暂的（**transient**关键字）
   ```
-public class Employee implements java.io.Serializable//类必须实现 java.io.Serializable 对象
+  public class Employee implements java.io.Serializable//类必须实现 java.io.Serializable 对象
 {
    public String name;
    public String address;
