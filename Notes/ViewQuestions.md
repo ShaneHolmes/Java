@@ -1,16 +1,36 @@
 # Java面试题
 Author@ [ShaneHolmes](https://github.com/ShaneHolmes)
 
-[TOC]
+- [面对对象编程开发的优点](#面对对象编程开发的优点)
+- [](#)
+- [对封装的理解](#对封装的理解)
+
+    - [Create](#create)
+    - [User toc manipulation](#user-toc-manipulation)
+    - [Update](#update)
+    - [Create elsewhere](#create-elsewhere)
+    - [Remove](#remove)
+    - [Customize](#customize)
+- [Install](#install)
+    - [emacs package repository](#emacs-package-repository)
+        - [Setup](#setup)
+            - [melpa stable](#melpa-stable)
+            - [melpa](#melpa)
+            - [marmalade](#marmalade)
+        - [Install](#install)
+    - [emacs-lisp file](#emacs-lisp-file)
+- [Inspiration](#inspiration)
+
+<!-- markdown-toc end -->
 
 * * *	
-## 1.面对对象编程开发的优点
+## 1 面对对象编程开发的优点
 - [ ] 代码开发模块化，更易于维护和修改 
 - [ ] 代码复用性高
 - [ ] 增加代码的可靠性和灵活性
 - [ ] 代码更容易理解
 
-## 2.对封装的理解
+## 2 对封装的理解
 - [ ] 封装隐藏了对象内部的**属性**和**行为**，并对外界提供一些能被其他对象访问的方法来改变它内部的数据。
 - [ ] 封装有三个等级的访问限定符：private，protect和public。
 -   **private：只能在类的内部被访问，子类，类外均不能访问**
