@@ -3,7 +3,7 @@ Author@ [ShaneHolmes](https://github.com/ShaneHolmes)
 
 * * *	
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
-- [面对对象编程开发的优点](#面对对象编程开发的优点)
+- [1 面对对象编程开发的优点](#面对对象编程开发的优点)
 - [对多态的理解](#对多态的理解)
 <!-- markdown-toc end -->
 ## 面对对象编程开发的优点
