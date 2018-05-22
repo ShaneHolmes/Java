@@ -15,10 +15,10 @@ Author@ [ShaneHolmes](https://github.com/ShaneHolmes)
 - [10 什么是自动拆-装箱](#什么是自动拆-装箱)
 - [11 构造函数-析构函数](#构造函数-析构函数)
 - [12 值传递-引用传递](#值传递-引用传递)
-- [13 Java线程-进程](#Java线程-进程)
+- [13 java线程-进程](#java线程-进程)
 - [14 泛型](#泛型)
 - [15 比较==与equal](#比较==与equal)
-- [16 垃圾回收机制GC](#垃圾回收机制GC)
+- [16 垃圾回收机制](#垃圾回收机制)
 - [17 java异常处理](#java异常处理)
 - [18 java小应用程序](#java小应用程序)
 - [19 序列化](#序列化)
@@ -408,10 +408,8 @@ Error:(17, 29) java: 不兼容的类型: 推断类型不符合上限
 ```
 
 
-## 垃圾回收机制GC
-
-（Garbage Collection）
-[博文链接](https://blog.csdn.net/plgy_Y/article/details/72791483)
+## 垃圾回收机制
+GC（Garbage Collection）[博文链接](https://blog.csdn.net/plgy_Y/article/details/72791483)
 - [ ] **Java自动内存管理**归结为自动化的解决了两个问题：**给对象分配内存和回收给对象分配的内存**
 - [ ] GC要考虑的三个问题：
 - **哪些内存需要回收？**（对象是否可以被回收的两种经典算法：引用记数法和可达性分析法 ）
