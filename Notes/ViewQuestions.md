@@ -9,9 +9,9 @@ Author@ [ShaneHolmes](https://github.com/ShaneHolmes)
 - [4 对多态的理解](#对多态的理解)
 - [5 抽象与抽象类抽象方法](#抽象与抽象类抽象方法)
 - [6 java虚拟机](#java虚拟机)
-- [7 JDK和JRE的区别是什么](#JDK和JRE的区别是什么)
+- [7 jdk和jre的区别是什么](#jdk和jre的区别是什么)
 - [8 static关键字](#static关键字)
-- [9 Java支持的数据类型](#Java支持的数据类型)
+- [9 java支持的数据类型](#java支持的数据类型)
 - [10 什么是自动拆和装箱](#什么是自动拆和装箱)
 - [11 构造函数&析构函数](#构造函数&析构函数)
 - [12 值传递&引用传递](#值传递&引用传递)
@@ -113,7 +113,7 @@ Animal a=new Animal();//不能被实例化
 ## java虚拟机
 - [ ] Java虚拟机屏蔽了与具体操作系统平台的相关信息，是的Java程序只需生成再Java虚拟机上运行的目标代码（[字节码](http://http://www.importnew.com/24088.html)），就可以不加修改的在安装有Java虚拟机的不同平台上运行，即一次编译到处运行
 
-## JDK和JRE的区别是什么
+## jdk和jre的区别是什么
 - [ ] JDK：Java Development Kit，Java语言的软件开发工具包；JRE：Java Running Environment，Java运行环境
 - [ ] JDK是完整的Java软件开发包，包含JRE，编译器和其他的工具，可以让开发者开发，编译，调试Java程序
 - [ ] JRE是将要执行Java程序的虚拟机，它也包含执行applet需要的浏览器插件
@@ -146,7 +146,7 @@ sum+=i对非静态成员变量i进行了访问，出错
 方法覆盖是运行时动态绑定的，static方法是编译时静态绑定的。static方法跟任何实例都不相关，所以概念上不适用
 ```
 
-## Java支持的数据类型
+## java支持的数据类型
 - [ ] Java支持8中基本数据类型
 -    byte
 -    short
