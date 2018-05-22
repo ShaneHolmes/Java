@@ -110,10 +110,8 @@ Animal a=new Animal();//不能被实例化
 - [ ] 继承抽象类的子类**必须重写**抽象类中**所有抽象方法**，否则，该子类也是一个抽象类，不能被实例化
 - [ ] **构造方法，类方法**（用**static**关键字来声明的方法）不能声明为抽象方法
 
-
 ## Java虚拟机
 - [ ] Java虚拟机屏蔽了与具体操作系统平台的相关信息，是的Java程序只需生成再Java虚拟机上运行的目标代码（[字节码](http://http://www.importnew.com/24088.html)），就可以不加修改的在安装有Java虚拟机的不同平台上运行，即一次编译到处运行
-
 
 ## JDK和JRE的区别是什么
 - [ ] JDK：Java Development Kit，Java语言的软件开发工具包；JRE：Java Running Environment，Java运行环境
