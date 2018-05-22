@@ -31,11 +31,11 @@ Author@ [ShaneHolmes](https://github.com/ShaneHolmes)
 - [ ] **final关键字**：final关键字修饰类时，该类不能被继承，即最终类，它的方法自动地声明为final类；修饰类中的成员变量或方法时，不能被子类修改重写。
 - [ ] 构造器：如果父类的构造器是**无参数**的，那么在子类中会**自动调用父类的无参构造器**；如果父类的构造器是有参数的，那么子类要想继承父类的构造器，则必须显示地通过**super**关键字，而且要**匹配参数**
 - [ ] 不实现多继承的原因：
-```
+```Java
 有四个类A，B1,B2,C.其中B1，B2均继承A中的eat()方法而且有了自己的实现，如果支持多继承，C在继承B1，B2后，同时继承了B1，B2中的eat()方法，当C没有实现自己的eat()方法，而调用了父类的eat()方法，那么编译器就不知道该调用哪个eat()方法，即所谓的菱形继承。
 ```
 - [ ] 为什么接口之间可以多继承：
-```
+```Java
 接口只是定义了某个行为的名称，并没有具体的实现细节。而一个类实现了具有相同名称的方法的两个接口，在该类中也只会有它自己的实现逻辑，并不会想类的多继承一样产生不知道调用父类的哪个方法的情况
 ```
 
@@ -49,7 +49,7 @@ Author@ [ShaneHolmes](https://github.com/ShaneHolmes)
 -    可扩充性，可替换性
 -    消除类型之间的耦合关系
 - [ ] 当使用多态的方式调用方法时，首先**检查父类中是否有该方法**，如果没有则编译错误；如果有，再去调用子类的同名方法
-```
+```Java
 Test.java
 abstract class Animal{
 	abstract void eat();
@@ -73,7 +73,7 @@ public class Test{
 - [ ] 抽象是把想法从实例中分离出来的步骤，因此，要根据他们的**功能**而不是具体的实现细节来创建类。
 - [ ] 这种抽象技术的主要目的是把类的**行为和实现细节**分离开
 - [ ] 抽象类不能被实例化
-```
+```Java
 abstract class Animal{
 	abstract void eat();
 }
@@ -97,7 +97,7 @@ Animal a=new Animal();//不能被实例化
 
 ## 8.static关键字
 - [ ] static意思是**静态的**，就是说类中的声明为**static**的**成员变量或方法**在没有被初始化的情况下可以被访问，访问方式为：
-```
+```Java
 class A{
 	public static int i=0;
     public static void f(){};
@@ -107,7 +107,7 @@ A.f();
 ```
 - [ ] static没有依附于任何对象，用不上**this**关键字
 - [ ] 在**静态方法**中不能访问**非静态的成员变量和非静态的成员方法**，如：
-```
+```Java
 class Test{
 int i=1;
 public static void main(String []args){
@@ -142,7 +142,7 @@ public static void main(String []args){
 - [ ] 一个类中可以有多个构造函数，即构造函数的**重载**，以参数的**个数，类型和顺序**来声明不同的重载类型
 - [ ] 如果显式声明了任何的一个构造函数，那么编译器就不会生成公有的默认构造函数
 - [ ] 构造函数的继承问题
-```
+```Java
 在创建对象时，先调用父类的构造函数进行初始化，然后调用子类自身的构造器。子类会自动的调用父类无参的构造器，要想调用有参的构造器，必须使用关键字super，并且参数列表要匹配。子类必须要调用父类的构造函数，可以通过系统自动调用父类默认的构造函数，如果父类没有构造函数，则子类构造函数必须通过关键字super显式地调用父类的构造函数。
 ```
 - [ ] Java中不存在析构函数，取而代之的时[GC（Garbage Collection）](https://baike.baidu.com/item/GC/66426?fr=aladdin)垃圾回收机制
@@ -214,13 +214,13 @@ public static void main(String []args){
 [好文阅读](https://www.cnblogs.com/xyhuangjinfu/p/6505329.html)
 - [ ] 进行线程同步有两种方法：
 - **同步代码块**
-```
+```Java
 synchronized(要同步的对象){
     要同步的操作；
 }
 ```
 - **同步方法**
-```
+```Java
    public synchronized void method(){
     要同步的操作
 }
@@ -241,19 +241,19 @@ Integer -- 实际类型参数
     "?"表示任意类型，使用"?"通配符可以引用各种参数化的类型，可以调用与参数化无关的方法(如size()方法)，不能调用与参数化有关的方法(如add()方法)
 - [ ] 通配符的**扩展**
 - 限定通配符的**上边界**
-```
+```Java
 ArrayList<? extends Number > collection1= new ArrayList<Integer >();//编译通过
 ArrayList<? extends Number > collection2= new ArrayList<String>();//编译不通过
 ```
 - 限定通配符的**下边界**
-```
+```Java
 ArrayList<? super Integer > collection3= new ArrayList<Number >();//编译通过
 ArrayList<? super Integer > collection4= new ArrayList<String>();//编译不通过
 ```
 #### 参数类型
 - [ ] 只有**引用类型**才能作为泛型方法的实际参数
 注：**如Integer是引用类型而int不是，int为基本类型**
-```
+```Java
 public class GenericTest {
     public static void main(String[] args) {
         swap(new String[]{"111","222"},0,1);//编译通过
@@ -270,7 +270,7 @@ public class GenericTest {
 }
 ```
 - [ ] **当实参不一致时，T取交集，即第一个共同的父类**
-```
+```Java
 public class GenericTest {
     public static void main(String[] args) {
         new GenericTest().testType();
@@ -297,7 +297,7 @@ Error:(17, 29) java: 不兼容的类型: 推断类型不符合上限
 ### 15.==与equal
 [博文地址](https://www.cnblogs.com/pop822/p/6215040.html)
 - [ ] 简单来说，**==比较的是2个对象的地址，而equals比较的是2个对象的内容。当equals为true时，==不一定为true，反之成立。**
-```
+```Java
 一、String中的equals和==
    1、
     public class TestString {
@@ -388,7 +388,7 @@ Error:(17, 29) java: 不兼容的类型: 推断类型不符合上限
 - [ ] **抛出异常**的三种方式
 - **系统自动抛异常**
 当程序语句出现一些逻辑错误、主义错误或类型转换错误时，系统会自动抛出异常：
-```
+```Java
 public static void main(String[] args) { 
     int a = 5, b =0; 
     System.out.println(5/b); 
@@ -402,7 +402,7 @@ public static void main(String[] args) {
 ```
 - **throw**
 throw是语句抛出一个异常，一般是在**代码块的内部**，当程序出现某种逻辑错误时由程序员主动抛出某种特定类型的异常
-```
+```Java
 public static void main(String[] args) {   
     String s = "abc";   
     if(s.equals("abc")) {   
@@ -419,7 +419,7 @@ Exception in thread "main" java.lang.NumberFormatException at......
 throws是**方法可能抛出异常**的声明。(用在声明方法时，表示该方法可能要抛出异常)
 `public void function() throws Exception{......}`
 当某个方法可能会抛出某种异常时用于throws 声明可能抛出的异常，然后**交给上层调用它的方法程序处理**
-```
+```Java
 public class testThrows(){  
 public static void function() throws NumberFormatException{   
 String s = "abc";   
@@ -434,12 +434,12 @@ System.err.println("非数据类型不能强制类型转换。");   //e.printSta
 }  
 //运行结果：
 非数据类型不能强制类型转换。
-```
+```Java
 - **throw与throws的比较**
 1、**throws出现在方法函数头；而throw出现在函数体**。
 2、throws表示出现异常的一种可能性，并**不一定会发生**这些异常；throw则是抛出了异常，**执行throw则一定抛出了某种异常对象**。
 3、两者都是消极处理异常的方式（这里的消极并不是说这种方式不好），只是抛出或者可能抛出异常，但是不会由函数去处理异常，真正的处理异常由函数的上层调用处理。
-```
+```Java
 编程习惯：
 1.在写程序时，对可能会出现异常的部分通常要用try{...}catch{...}去捕捉它并对它进行处理；
 2.用try{...}catch{...}捕捉了异常之后一定要对在catch{...}中对其进行处理，那怕是最简单的一句输出语句，或栈输入e.printStackTrace();
@@ -477,7 +477,7 @@ System.err.println("非数据类型不能强制类型转换。");   //e.printSta
 - 一个类要想被序列化成功，必须满足两个条件：
   1.**实现`java.io.Serializable`接口**
   2.该类的**所有属性必须都是可序列化**的，如果有一个属性不是可序列化的，则该属性必须注明是短暂的（**transient**关键字）
-  ```
+  ```Java
   public class Employee implements java.io.Serializable//类必须实现 java.io.Serializable 对象
   { 
    public String name;
@@ -495,7 +495,7 @@ System.err.println("非数据类型不能强制类型转换。");   //e.printSta
 - JDK类库中序列化API
   **`java.io.ObjectOutputStream`:表示对象输出流
   它的`writeObject(Object obj)`方法可以对指定的obj参数进行序列化，把得到的字节序列写到一个目标输出流中**
-```
+```Java
 import java.io.*;
 public class SerializeDemo
 {
@@ -527,7 +527,7 @@ public class SerializeDemo
   **`java.io.ObjectInputStream`:表示对象输入流
   它的`readObject(Object obj)`方法从源输入流中读取字节序列，再把字节序列反序列成为一个对象，并将对象返回**
 
-```
+```Java
 import java.io.*;
 public class DeserializeDemo
 {
