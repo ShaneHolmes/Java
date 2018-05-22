@@ -495,7 +495,7 @@ System.err.println("非数据类型不能强制类型转换。");   //e.printSta
 - JDK类库中序列化API
   **`java.io.ObjectOutputStream`:表示对象输出流
   它的`writeObject(Object obj)`方法可以对指定的obj参数进行序列化，把得到的字节序列写到一个目标输出流中**
-	```
+```
 import java.io.*;
 public class SerializeDemo
 {
@@ -526,7 +526,8 @@ public class SerializeDemo
 - 反序列化：
   **`java.io.ObjectInputStream`:表示对象输入流
   它的`readObject(Object obj)`方法从源输入流中读取字节序列，再把字节序列反序列成为一个对象，并将对象返回**
- ```
+
+```
 import java.io.*;
 public class DeserializeDemo
 {
