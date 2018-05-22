@@ -209,7 +209,7 @@ public static void main(String []args){
 - **终止（或撤销）进程**：终止（或撤销）系统中的一个或多个死锁进程，直至打破循环环路，使系统从死锁状态解脱出来
 
 ### 线程同步
-[测试实例代码](https://github.com/ShaneHolmes/Java/blob/master/Codes/LinkResources/com.threadTest/SynchronizedThread.java)
+[测试实例代码](https://github.com/ShaneHolmes/Java/blob/master/LinkResources/com.threadTest/SynchronizedThread.java)
 
 [好文阅读](https://www.cnblogs.com/xyhuangjinfu/p/6505329.html)
 - [ ] 进行线程同步有两种方法：
