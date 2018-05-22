@@ -3,8 +3,8 @@ Author@ [ShaneHolmes](https://github.com/ShaneHolmes)
 
 * * *	
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
-- [面对对象编程开发的优点](#面对对象编程开发的优点)
-- [对封装的理解](#对封装的理解)
+- [1 面对对象编程开发的优点](#1 面对对象编程开发的优点)
+- [2 对封装的理解](#2 对封装的理解)
 <!-- markdown-toc end -->
 ## 1 面对对象编程开发的优点
 - [ ] 代码开发模块化，更易于维护和修改 
