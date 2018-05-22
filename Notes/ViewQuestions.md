@@ -1,26 +1,9 @@
 # Java面试题
 Author@ [ShaneHolmes](https://github.com/ShaneHolmes)
 
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
 - [面对对象编程开发的优点](#面对对象编程开发的优点)
-- [](#)
 - [对封装的理解](#对封装的理解)
-
-    - [Create](#create)
-    - [User toc manipulation](#user-toc-manipulation)
-    - [Update](#update)
-    - [Create elsewhere](#create-elsewhere)
-    - [Remove](#remove)
-    - [Customize](#customize)
-- [Install](#install)
-    - [emacs package repository](#emacs-package-repository)
-        - [Setup](#setup)
-            - [melpa stable](#melpa-stable)
-            - [melpa](#melpa)
-            - [marmalade](#marmalade)
-        - [Install](#install)
-    - [emacs-lisp file](#emacs-lisp-file)
-- [Inspiration](#inspiration)
-
 <!-- markdown-toc end -->
 
 * * *	
