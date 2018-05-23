@@ -22,6 +22,9 @@ Author@ [ShaneHolmes](https://github.com/ShaneHolmes)
 - [17 Java异常处理](#java异常处理)
 - [18 Java小应用程序](#java小应用程序)
 - [19 序列化](#序列化)
+- [20 jsp内置对象](#)
+- [21 Java设计模式](#)
+- [22 sleepwait](#)
 
 
 <!-- markdown-toc end -->
