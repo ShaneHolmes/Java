@@ -264,6 +264,9 @@ synchronized(要同步的对象){
     要同步的操作
 }
 ```
+###sleep()和wait()区别
+- [ ] sleep()是thread线程类的static静态方法，调用线程进入睡眠状态，让出执行机会给其他线程，等到休眠时间结束后，线程进入就绪状态和其他线程一起竞争cpu的执行时间（休眠完后不一定立即执行）。不会释放对象锁，所以不能调用同步方法（即使睡着了也持有对象锁）
+- [ ] wait()方法是Object类里的方法；当一个线程执行到wait()方法时，它就进入到一个和该对象相关的等待池中，同时失去（释放）了对象的机锁（暂时失去机锁，wait(long timeout)超时时间到后还需要返还对象锁）；可以调用里面的同步方法，其他线程可以访问；wait()使用notify或者notifyAlll或者指定睡眠时间来唤醒当前等待池中的线程。wiat()必须放在synchronized block中，否则会在program runtime时扔出”java.lang.IllegalMonitorStateException“异常。
 
 ## 泛型
 ### 术语
