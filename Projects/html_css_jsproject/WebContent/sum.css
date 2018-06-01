@@ -1,0 +1,43 @@
+
+.face
+{
+	
+	height:1000px;
+	background-color:#E5E7E8;
+	margin:0 auto;
+}
+
+
+.navi
+{
+	
+	height:450px;
+	background-color:#F6F6F6;
+	
+}
+
+.pic
+{
+
+	height:450px;
+	background-color:#E5E7E8;
+	
+}
+
+.footer
+{
+	height:190px;
+	background-color:#9A9D9D;
+	margin:0 auto;
+}
+
+.foot
+{
+	width:450px;
+	margin:0 auto;
+	text-align:center;
+}
+
+a{
+	text-decoration: none;
+}

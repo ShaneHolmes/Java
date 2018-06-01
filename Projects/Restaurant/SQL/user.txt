@@ -1,0 +1,4 @@
+161025   路人甲   j161025    人生在世不称意，明朝散发打酱油。       Users/HeadImage/A.jpg
+161026   炮灰乙   y161026    别拿炮灰不当肥料，咱也是有尊严的。     Users/HeadImage/B.jpg
+161027   流氓丙   b161027    小妞，给大爷笑一个。                   Users/HeadImage/C.jpg
+161028   土匪丁   d161028    要打此路过，留下买路财。               Users/HeadImage/D.jpg

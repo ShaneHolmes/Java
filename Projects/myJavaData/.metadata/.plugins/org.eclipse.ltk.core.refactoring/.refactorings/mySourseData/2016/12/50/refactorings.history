@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;mySourseData/images/zxhkwkbj2zg音频与视频播放器图标21.png&apos; to &apos;sourse1.jpg&apos;" description="Rename resource &apos;zxhkwkbj2zg音频与视频播放器图标21.png&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="images/zxhkwkbj2zg音频与视频播放器图标21.png" name="sourse1.jpg" stamp="1480862365328" updateReferences="true"/>
+</session>

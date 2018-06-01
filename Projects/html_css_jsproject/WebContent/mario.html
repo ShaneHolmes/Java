@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<!-- 下面导入my.css文件 -->
+<link href="mario.css" type="text/css" rel="stylesheet">
+<script language="javascript" src="myfuns.js"></script>
+<script language="javascript" type="text/javascript">
+function Mario(){
+	//移动：0123分别代表上右下左.向右边向下边left，top增大
+	this.move=function(direct){
+		//为了改变img的left，top，需要得到img元素。
+		var mymario=document.getElementById('mymario');
+		var left=mymario.style.left;//..px
+		left=parseInt(left.substr(0,left.length-2));//得到距离body左上角的left的数值
+		var top=mymario.style.top;
+		top=parseInt(top.substr(0,top.length-2));
+		
+		switch(direct){	
+		case 0:
+			mymario.style.top=(top-5)+"px";
+			break;
+		case 1:
+			mymario.style.left=(left+5)+"px";	
+			break;
+		case 2:
+			mymario.style.top=(top+5)+"px";
+			break;
+		case 3:
+			mymario.style.left=(left-5)+"px";
+			break;
+		}	
+	}
+}
+//创建Mario对象
+var mario=new Mario();
+//全局函数
+function marioMove(direct){
+	mario.move(direct);
+}
+
+</script>
+</head>
+<body>
+<div class="gamediv">
+<img id="mymario" style="width:50px;left:450px;top:150px;position:absolute;" src="./images/mario.jpg"/>
+</div><br/>
+<table border="1" class="controlcenter" align="center">
+<tr align="center"><td colspan="3">控制台</td></tr>
+<tr align="center"><td>**</td><td><input type="button" value="↑↑" onclick="marioMove(0)"/></td><td>**</td></tr>
+<tr align="center"><td><input type="button" value="←" onclick="marioMove(3)"/></td><td>**</td><td><input type="button" value="→" onclick="marioMove(1)"/></td></tr>
+<tr align="center"><td>**</td><td><input type="button" value="↓↓" onclick="marioMove(2)"/></td><td>**</td></tr>
+</table>
+</body>
+</html>
