@@ -1,9 +1,4 @@
-/*
- *@author ShaneHolmes
- *date:2018.5.7
- *@Right Copy.All right reserved.
-**/
-package tankGame;
+package tk.edition1;
 import java.awt.*;
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -19,7 +14,7 @@ public class Game1 extends JFrame implements ActionListener,MouseListener
 	JMenuItem jmi1,jmi2,jmi3,jmi4;
 	MyPanel mp;
 	PrePanel pp=new PrePanel();
-	//æ ‡è®°newgameçš„æ¬¡æ•°
+	//±ê¼ÇnewgameµÄ´ÎÊı
 	int count=0;
 	
 	public static void main(String[] args)
@@ -35,26 +30,26 @@ public class Game1 extends JFrame implements ActionListener,MouseListener
 		pp.jl4.addMouseListener(this);
 		
 		jmb=new JMenuBar();
-		jm1=new JMenu("æ¸¸æˆï¼ˆGï¼‰");
-		jm1.setFont(new Font("å®‹ä½“",Font.PLAIN,14));
+		jm1=new JMenu("ÓÎÏ·£¨G£©");
+		jm1.setFont(new Font("ËÎÌå",Font.PLAIN,14));
 		jm1.setMnemonic('G');
-		jm2=new JMenu("æŸ¥çœ‹ï¼ˆVï¼‰");
-		jm2.setFont(new Font("å®‹ä½“",Font.PLAIN,14));
+		jm2=new JMenu("²é¿´£¨V£©");
+		jm2.setFont(new Font("ËÎÌå",Font.PLAIN,14));
 		jm2.setMnemonic('V');
-		jm3=new JMenu("å¸®åŠ©ï¼ˆHï¼‰");
-		jm3.setFont(new Font("å®‹ä½“",Font.PLAIN,14));
+		jm3=new JMenu("°ïÖú£¨H£©");
+		jm3.setFont(new Font("ËÎÌå",Font.PLAIN,14));
 		jm3.setMnemonic('H');
 		
-		jmi1=new JMenuItem("å¼€å§‹æ¸¸æˆ",new ImageIcon("images/start.jpg"));
-		jmi1.setFont(new Font("å®‹ä½“",Font.PLAIN,14));
+		jmi1=new JMenuItem("¿ªÊ¼ÓÎÏ·",new ImageIcon("images/start.jpg"));
+		jmi1.setFont(new Font("ËÎÌå",Font.PLAIN,14));
 		jmi1.addActionListener(this);
 		jmi1.setActionCommand("newgame");
-		jmi2=new JMenuItem("ç»§ç»­æ¸¸æˆ",new ImageIcon("images/continue.jpg"));
-		jmi2.setFont(new Font("å®‹ä½“",Font.PLAIN,14));
-		jmi3=new JMenuItem("è®¾ç½®æ¸¸æˆ");
-		jmi3.setFont(new Font("å®‹ä½“",Font.PLAIN,14));
-		jmi4=new JMenuItem("å­˜æ¡£é€€å‡º");
-		jmi4.setFont(new Font("å®‹ä½“",Font.PLAIN,14));
+		jmi2=new JMenuItem("¼ÌĞøÓÎÏ·",new ImageIcon("images/continue.jpg"));
+		jmi2.setFont(new Font("ËÎÌå",Font.PLAIN,14));
+		jmi3=new JMenuItem("ÉèÖÃÓÎÏ·");
+		jmi3.setFont(new Font("ËÎÌå",Font.PLAIN,14));
+		jmi4=new JMenuItem("´æµµÍË³ö");
+		jmi4.setFont(new Font("ËÎÌå",Font.PLAIN,14));
 		
 		jm1.add(jmi1);
 		jm1.add(jmi2);
@@ -71,7 +66,7 @@ public class Game1 extends JFrame implements ActionListener,MouseListener
 		Thread t=new Thread(pp);
 		t.start();
 		
-		this.setTitle("å¦å…‹å¤§æˆ˜å°æ¸¸æˆ");
+		this.setTitle("Ì¹¿Ë´óÕ½Ğ¡ÓÎÏ·");
 		this.setIconImage(new ImageIcon("images/game.jpg").getImage());
 		this.setSize(1100,665);
 		this.setResizable(false);
@@ -191,8 +186,8 @@ class PrePanel extends JPanel implements Runnable
 		if(yes)
 		{
 			g.setColor(Color.BLUE);
-			g.setFont(new Font("åæ–‡æ–°é­",Font.BOLD,200));
-			g.drawString("å¦å…‹å¤§æˆ˜", 100, 230);
+			g.setFont(new Font("»ªÎÄĞÂÎº",Font.BOLD,200));
+			g.drawString("Ì¹¿Ë´óÕ½", 100, 230);
 		}
 	}
 	
@@ -209,20 +204,20 @@ class PrePanel extends JPanel implements Runnable
 		
 		bim=new BackImage(im);
 		
-		Font font=new Font("åæ–‡è¡Œæ¥·",Font.BOLD,25);
-		jl1=new JLabel("å¼€   å§‹   æ¸¸   æˆ");
+		Font font=new Font("»ªÎÄĞĞ¿¬",Font.BOLD,25);
+		jl1=new JLabel("¿ª   Ê¼   ÓÎ   Ï·");
 		jl1.setFont(font);
 		jl1.setForeground(Color.RED);
 		jl1.setEnabled(false);
-		jl2=new JLabel("ç»§   ç»­   ä¸Š   å±€");
+		jl2=new JLabel("¼Ì   Ğø   ÉÏ   ¾Ö");
 		jl2.setFont(font);
 		jl2.setForeground(Color.RED);
 		jl2.setEnabled(false);
-		jl3=new JLabel("è”   æœº   ä½œ   æˆ˜");
+		jl3=new JLabel("Áª   »ú   ×÷   Õ½");
 		jl3.setFont(font);
 		jl3.setForeground(Color.RED);
 		jl3.setEnabled(false);
-		jl4=new JLabel("å…³   é—­   æ¸¸   æˆ");
+		jl4=new JLabel("¹Ø   ±Õ   ÓÎ   Ï·");
 		jl4.setFont(font);
 		jl4.setForeground(Color.RED);
 		jl4.setEnabled(false);
@@ -269,7 +264,7 @@ class MyPanel extends JPanel implements KeyListener,Runnable
     Vector<Enemy> vem=new Vector<Enemy>();
     int ensize=6;
     
-    //ç‚¸å¼¹å‘é‡
+    //Õ¨µ¯ÏòÁ¿
     Vector<Bomb> vbb=new Vector<Bomb>();
     Image image1=null;
     Image image2=null;
@@ -351,11 +346,11 @@ class MyPanel extends JPanel implements KeyListener,Runnable
 			bomb.lifedown();
 		}
 		
-		//ç”»æ•Œäººå¦å…‹å’Œå­å¼¹
+		//»­µĞÈËÌ¹¿ËºÍ×Óµ¯
 		for(int i=0;i<this.vem.size();i++)
 		{
 			Enemy en=this.vem.get(i);
-			//ç”»å­å¼¹
+			//»­×Óµ¯
 			g.setColor(Color.CYAN);
 			for(int j=0;j<en.vbul.size();j++)
 			{
@@ -369,7 +364,7 @@ class MyPanel extends JPanel implements KeyListener,Runnable
 					en.vbul.remove(bt);
 				}
 			}
-			//ç”»æ•Œäººå¦å…‹
+			//»­µĞÈËÌ¹¿Ë
 			if(en.isLive())
 			{
 				this.drawTank(en.getX(), en.getY(),g, en.getDir(), 1);
@@ -381,12 +376,12 @@ class MyPanel extends JPanel implements KeyListener,Runnable
 		}
 	}
 
-	//æ˜¾ç¤ºä¿¡æ¯
+	//ÏÔÊ¾ĞÅÏ¢
 	public void showinfo(Graphics g)
 	{
-		g.setFont(new Font("æ¥·ä½“",Font.BOLD,22));
+		g.setFont(new Font("¿¬Ìå",Font.BOLD,22));
 		g.setColor(Color.RED);
-		g.drawString("æ¸¸æˆåŸºæœ¬ä¿¡æ¯", 930, 40);
+		g.drawString("ÓÎÏ·»ù±¾ĞÅÏ¢", 930, 40);
 		this.drawTank(930, 60, g, 0, 1);
 		this.drawTank(930, 130, g, 0, 0);
 		this.drawTank(930, 500, g, 0, 2);
@@ -396,7 +391,7 @@ class MyPanel extends JPanel implements KeyListener,Runnable
 		g.drawString("15", 1000, 527);
 	}
 	
-	//åˆ¤æ–­å­å¼¹æ˜¯å¦å‡»ä¸­å¦å…‹
+	//ÅĞ¶Ï×Óµ¯ÊÇ·ñ»÷ÖĞÌ¹¿Ë
 	public void hitTank(Bullet bul,Tank tk)
 	{
 		if(bul.getX()>tk.getX()&&bul.getX()<tk.getX()+40&&bul.getY()>tk.getY()&&bul.getY()<tk.getY()+40)
@@ -887,9 +882,9 @@ class Enemy extends Tank implements Runnable
 	int bulsize=3;
 	
 	int sle=150;
-	//å®šä¹‰ä¸€ä¸ªå‘é‡ç”¨æ¥è®¿é—®MyPaneçš„æ‰€æœ‰æ•Œäººå‘é‡
+	//¶¨ÒåÒ»¸öÏòÁ¿ÓÃÀ´·ÃÎÊMyPaneµÄËùÓĞµĞÈËÏòÁ¿
 	Vector<Enemy> ets=new Vector<Enemy>();
-	//å®šä¹‰ä¸€ä¸ªheroç”¨æ¥è®¿é—®é¢æ¿çš„hero
+	//¶¨ÒåÒ»¸öheroÓÃÀ´·ÃÎÊÃæ°åµÄhero
 	Hero he;
 	
 	public Enemy(int x,int y)
@@ -898,7 +893,7 @@ class Enemy extends Tank implements Runnable
 		this.dir=2;
 	}
 	
-	//åˆ¤æ–­æ˜¯å¦ç¢°åˆ°åˆ«çš„å¦å…‹
+	//ÅĞ¶ÏÊÇ·ñÅöµ½±ğµÄÌ¹¿Ë
 	public boolean touchTank()
 	{
 		int dx=this.getX()-he.getX();
